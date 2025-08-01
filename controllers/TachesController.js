@@ -20,4 +20,20 @@ const createTache = async (req, res) => {
     }
 }
 
-module.exports = {createTache};
+const getAllTaches = async (req, res) => {
+    try {
+        const  projectId = req.params.projectId
+        const project = await Project.findByPk(projectId)
+        if (!project) {
+            return res.status(404).json({message: 'Projet non trouvé'})
+        }    
+        const taches = await project.getTache();
+        res.status(200).json(taches)
+        
+    } catch (error) {
+        res.status(500).json({message : "Erreur Serveur!", error: error.message})
+    }
+}
+
+
+module.exports = {createTache, getAllTaches};

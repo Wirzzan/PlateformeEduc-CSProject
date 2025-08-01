@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "c964ce63-5b7e-41c7-9180-8cd682ccda33",
+		"name": "MiniProjet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36949219"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "GET/All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Premier projet\",\r\n    \"description\": \"Ceci est notre prmeier projet, merci :)\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/projects/get_all",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"get_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET/by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Premier projet\",\r\n    \"description\": \"Ceci est notre prmeier projet, merci :)\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/projects/get_by_id/3",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"get_by_id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE/by_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Mon plus beau Projet !\",\r\n    \"description\": \"Le BEST, tu connais ;)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/projects/update_project/3",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"update_project",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE/by_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Premier projet\",\r\n    \"description\": \"Ceci est notre prmeier projet, merci :)\"\r\n}"
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/projects/delete_project/2",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"delete_project",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"Cinquième projet\",\r\n    \"description\": \"Ceci est notre prmeier projet, merci :)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/projects/create_project",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								"create_project"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Taches",
+			"item": [
+				{
+					"name": "POST/Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titre\" : \"Notre tâche\",\r\n    \"statut\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/projects/3/taches/create_tache",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"3",
+								"taches",
+								"create_tache"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
